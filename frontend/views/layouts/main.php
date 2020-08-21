@@ -24,55 +24,57 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+	<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand и toggle сгруппированы для лучшего отображения на мобильных дисплеях -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Соберите навигационные ссылки, формы, и другой контент для переключения -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="#">Рифмы к словам<span class="sr-only"></span></a>
+                <li class=""><a href="#">Рифмы к именам<span class="sr-only"></span></a>
+
+            </ul>
+            <?php
+
+            use yii\widgets\ActiveForm;
+
+            $form = ActiveForm::begin([
+                'action' => '/residentname/search-city-by-spell-form',
+                'options' => ['class' => 'navbar-form navbar-left'],
+            ]) ?>
+
+            <div class="form-group">
+                <?= $form->field($SearchRhyme, 'query')
+                    ->textInput([
+                        'class' => 'form-control',
+                        'placeholder' => 'Поиск',
+                    ])->label('');
+                ?>
+            </div>
+
+            <?= Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
+
+            <?php ActiveForm::end() ?>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php /*?>
-
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+    <?= $content ?>
 </div>
-   <?php */?>
-
-
 <?php $this->endBody() ?>
 </body>
 </html>
