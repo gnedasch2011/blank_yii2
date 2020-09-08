@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use yii\helpers\Html;
@@ -20,12 +21,13 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="image/x-icon" href="/images/main/favicon/favicon.ico" rel="icon">
+    <script src="/js/metrika.js"></script>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand и toggle сгруппированы для лучшего отображения на мобильных дисплеях -->
         <div class="navbar-header">
