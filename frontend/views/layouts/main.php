@@ -76,6 +76,19 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <?php
+        // $this is the view object currently being used
+        echo Breadcrumbs::widget([
+            'homeLink' => [
+                'label' => 'Рифмы к словам',
+                'url' => Yii::$app->homeUrl,
+                'title' => 'Рифмы к словам',
+            ],
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]);
+        ?>
+    </div>
     <?= $content ?>
 </div>
 <?php $this->endBody() ?>
