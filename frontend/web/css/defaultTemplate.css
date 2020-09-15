@@ -1,0 +1,25 @@
+/*header*/
+
+/* Обычный */
+
+@font-face {
+    font-family: Mulish;
+    src: url('/css/fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+}
+
+
+body {
+    font-family: 'Mulish';
+}
+
+.navbar-default {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #fff;
+}
+
+.navbar-nav {
+    margin-left: 90px;
+}
