@@ -52,6 +52,17 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+//                'rhyme/index' => 'rhyme/index',
+//                'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
+//                '' => 'rhyme/index',
+//                'names' => 'rhyme/page-with-name',
+//                'sitemap.xml' => 'sitemap/default',
+//                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
+//                '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',
+//                '<module:[\w-]+>/admin/<action:[\w-]+>' => '<module>/admin/<action>',
+//                [
+//                    'class' => 'frontend\modules\url\components\rule\UrlRule',
+//                ],
             ],
         ],
 

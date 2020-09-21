@@ -27,11 +27,9 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php
-echo $this->render('/block/header/_header.php');
-?>
-<?php $this->beginBody() ?>
 
+<?php $this->beginBody() ?>
+<?= $this->render('/block/header/_header.php') ;?>
 <div class="wrap">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <?php
