@@ -1,5 +1,5 @@
 <?php
-use frontend\models\form\SearchQuery;
+use frontend\modules\search\form\SearchQuery;
 use yii\helpers\Html;
 
 $SearchQuery = new SearchQuery();
