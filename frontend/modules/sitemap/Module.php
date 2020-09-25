@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\sitemap;
+namespace frontend\modules\sitemap;
 
 /**
  * tests module definition class

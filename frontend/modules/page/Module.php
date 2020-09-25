@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\page;
+namespace frontend\modules\page;
 
 /**
  * tests module definition class
