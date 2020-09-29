@@ -29,7 +29,7 @@ AppAsset::register($this);
 <body>
 
 <?php $this->beginBody() ?>
-<?= $this->render('/block/header/_header.php') ;?>
+<?= $this->render("@app/views/block/headers/_header.php"); ?>
 <div class="wrap">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <?php
